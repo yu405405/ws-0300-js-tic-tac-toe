@@ -72,15 +72,15 @@ cell.forEach(function(element) {
                     comment.textContent = '○ win!!'
                     //勝敗決定時以降はclick不可
                     box.classList.add('click_none')
+                    return
                     
                 } else if(cell[winPattern0].textContent === '×' && cell[winPattern1].textContent === '×' && cell[winPattern2].textContent === '×') {
                     comment.textContent = '× win!!'
                     box.classList.add('click_none')
-
-                // 9回目で勝負がつかなかったらコメントをdraw表示にする
-                // ただし、今は9手目で勝敗が決定した場合でもdraw表示になってしまう
-                // 「9手目が終了した場合」、かつ「勝敗が決定していない場合」はdraw表示にする
-                } else if(clickCount === 9) {
+                    return
+                // returnがないと、1番目の条件に一致していても3番目の条件の方が優先されていた → 1,2,3と条件を順番に見ていく挙動？
+                // if文は上から見にいって、一致したら以降の条件を見に行かないのでは？
+                } else if(clickCount === 9 && element.textContent !== '') {
                     comment.textContent = 'draw'
                 }
 
