@@ -25,7 +25,15 @@ html
                 justify-content: center
                 align-items: center
                 &.active
-                    border-bottom: 4px solid #000
+                    position: relative
+                    &::after
+                        content: ''
+                        width: 80px
+                        height: 4px
+                        background-color: #000
+                        position: absolute
+                        bottom: -4px
+                        left: 0
             .maru
                 font-size: 28px
             .batsu
