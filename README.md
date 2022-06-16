@@ -1,3 +1,8 @@
+# ブランチの見方
+master → 添削後のコード
+dev → テスト環境
+20220617_beforeCodeReview_01 → 添削前のコード（動作OK）
+
 # js-tic-tac-toe
 
 このリポジトリ はHTML, CSS(SASS), JavaScriptの練習用リポジトリです。
