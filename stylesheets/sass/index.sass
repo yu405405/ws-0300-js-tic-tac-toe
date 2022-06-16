@@ -2,3 +2,72 @@
 @import 'variable'
 
 html
+    font-family: 'Lato', 'Lucida Grande', 'Lucida Sans Unicode', Tahoma, Sans-Serif
+    body
+        height: 100vh
+        display: flex
+        justify-content: center
+        align-items: center
+    .container
+        text-align: center
+        .ttl
+            font-size: 18px
+            margin-bottom: 20px
+        .round_cross
+            display: flex
+            justify-content: center
+            align-items: center
+            margin-bottom: 50px
+            div
+                width: 80px
+                height: 50px
+                display: flex
+                justify-content: center
+                align-items: center
+                &.active
+                    position: relative
+                    &::after
+                        content: ''
+                        width: 80px
+                        height: 4px
+                        background-color: #000
+                        position: absolute
+                        bottom: -4px
+                        left: 0
+            .maru
+                font-size: 28px
+            .batsu
+                font-size: 18px
+        .box
+            display: flex
+            justify-content: center
+            border-collapse: collapse
+            margin-bottom: 30px
+            &.click_none
+                pointer-events: none
+            .cell
+                font-size: 30px
+                width: 48px
+                height: 48px
+                border: 2px solid #000066
+                &.click_none
+                    pointer-events: none
+        .comment
+            height: 24px
+            margin-bottom: 10px          
+        .restart
+            width: 180px
+            margin: 0 auto
+            border: 2px solid #000
+            border-radius: 4px
+            a
+                font-weight: bold
+                text-decoration: none
+                color: #000
+                display: block
+                padding: 2px 0
+            &:hover
+                background-color: #000
+                a
+                    color: #fff
+    
